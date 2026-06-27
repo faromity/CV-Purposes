@@ -12,50 +12,24 @@
   /* Color palette – Venti:3 / Turquoise */
   --bg: #F4FBFA;
   --panel: #FFFFFF;
-
-
-
-
   --primary: #4FB6A6;
   --primary-soft: #D7EEEA;
   --secondary: #9FD6CE;
-
-
-
-
   --border: #BFE2DB;
-
-
-
-
   --text: #2F3E3B;
   --muted: #6B8F88;
-
-
-
-
   --accent: #4FB6A6;
 }
-
-
-
-
+  
 * {
   box-sizing: border-box;
 }
-
-
-
-
+  
 body {
   margin: 0;
   min-height: 100vh;
   font-family: "Segoe UI", "Helvetica Neue", "Nunito", Arial, sans-serif;
   color: var(--text);
-
-
-
-
   background-color: var(--bg);
   background-repeat: no-repeat;
   background-position: center;
@@ -63,54 +37,25 @@ body {
   background-attachment: fixed;
 }
 
-
-
-
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-
-
-
-
-  /* 20% opacity reduction + slight softening */
   background: rgba(244, 251, 250, 0.75);
-
-
-
-
-  backdrop-filter: blur(2px);       /* VERY subtle blur */
-  -webkit-backdrop-filter: blur(2px); /* Safari support */
-
-
-
-
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   pointer-events: none;
   z-index: -1;
 }
-
-
-
-
-
-
-
 
 .custom-link {
   color: inherit;
   text-decoration: none;
 }
 
-
-
-
 .custom-link:hover {
   text-decoration: underline;
 }
-
-
-
 
 /* ───────── Container ───────── */
 .container {
@@ -122,9 +67,6 @@ body::before {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(79,182,166,0.15);
 }
-
-
-
 
 /* ───────── Header ───────── */
 .header {
@@ -144,9 +86,6 @@ body::before {
   font-weight: 600;
 }
 
-
-
-
 /* ───────── Profile ───────── */
 .profile-top {
   display: flex;
@@ -155,37 +94,22 @@ body::before {
   gap: 20px;
   padding: 20px;
   background-image: url('https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Namecard_Background_Venti_Azure_Sky.png/revision/latest?cb=20210330005404');
-  background-size: cover;       /* Makes the image cover the entire div */
-  background-position: center;  /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
-
 
 .profile-top::before {
   content: "";
   position: absolute;
   inset: 0;
-
-
-
-
-  /* Diagonal fade: top-left → bottom-right */
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.8) 0%,   /* top-left (20% visible image) */
-    rgba(255, 255, 255, 0.6) 100% /* bottom-right (40% visible image) */
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.6) 100%
   );
-
-
-
-
   z-index: 0;
 }
-
-
-
 
 .avatar {
   width: 100px;
@@ -197,9 +121,6 @@ body::before {
   box-shadow: 0 4px 12px rgba(79, 182, 166, 0.3);
 }
 
-
-
-
 .profile-info h1 {
   margin: 0;
   font-size: 22px;
@@ -210,9 +131,6 @@ body::before {
   gap: 8px;
 }
 
-
-
-
 .alias {
   font-size: 16px;
   color: var(--muted);
@@ -220,23 +138,16 @@ body::before {
   top: 2px;
 }
 
-
-
-
 .tagline {
   margin-top: 3px;
   font-size: 14px;
   color: var(--text);
 }
 
-
-
-
 .address {
   font-size: 8px;
   color: var(--muted);
 }
-
 
 /* ───────── Media / Contact ───────── */
 .media {
@@ -245,9 +156,6 @@ body::before {
   gap: 3px;
   margin-top: 8px;
 }
-
-
-
 
 .media div {
   background: var(--primary-soft);
@@ -258,16 +166,10 @@ body::before {
   color: var(--text);
 }
 
-
-
-
 #border {
   border: 2px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
-
-
 
 /* ───────── Tabs ───────── */
 .buttons {
@@ -277,9 +179,6 @@ body::before {
   padding: 14px;
   border: 1px solid var(--border);
 }
-
-
-
 
 .buttons button {
   border-radius: 999px;
@@ -292,15 +191,9 @@ body::before {
   transition: all 0.2s ease;
 }
 
-
-
-
 .buttons button:hover {
   transform: translateY(-1px);
 }
-
-
-
 
 .buttons button.active {
   background: var(--primary);
@@ -308,41 +201,26 @@ body::before {
   border-color: var(--primary);
 }
 
-
-
-
 /* ───────── Content ───────── */
 .content {
   padding: 14px;
   padding-top: 0;
-  overflow: hidden; /* Needed for height transitions */
+  overflow: hidden;
   transition: height 0.4s ease;
 }
-
-
-
 
 .tab {
   display: none;
 }
 
-
-
-
 .tab.active {
   display: block;
 }
-
-
-
 
 /* ───────── Sections ───────── */
 .section {
   margin-bottom: 20px;
 }
-
-
-
 
 .section h3 {
   margin-bottom: 8px;
@@ -351,34 +229,22 @@ body::before {
   color: var(--text);
 }
 
-
-
-
 .section p {
   font-size: 14px;
   margin: 0;
   line-height: 1.6;
 }
 
-
-
-
 .section ul {
   margin: 6px 0 0;
   padding-left: 20px;
 }
-
-
-
 
 .section li {
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 1.5;
 }
-
-
-
 
 /* ───────── Banner / Footer ───────── */
 .banner {
@@ -390,9 +256,6 @@ body::before {
   border-bottom: 1px solid var(--border);
 }
 
-
-
-
 .footer {
   background: #EAF6F4;
   text-align: center;
@@ -401,9 +264,6 @@ body::before {
   color: var(--muted);
 }
 
-
-
-
 /* ───────── Decorative placeholders ───────── */
 .stat img,
 .chibi {
@@ -411,18 +271,12 @@ body::before {
   border-radius: 12px;
 }
 
-
-
-
 .icon {
     position: absolute;
     top: 10px;
     right: -260px;
     filter: drop-shadow(0 6px 16px rgba(0, 72, 48, 0.55));
 }
-
-
-
 
 /* ───────── Responsive ───────── */
 @media (max-width: 640px) {
@@ -432,16 +286,10 @@ body::before {
     align-items: center;
   }
 
-
-
-
   .media {
     grid-template-columns: 1fr;
   }
 }
-
-
-
 
 @media (orientation: portrait) {
   body {
@@ -452,9 +300,6 @@ body::before {
   color: var(--muted);
   }
 }
-
-
-
 
 @media (orientation: landscape) {
   body {
@@ -469,31 +314,17 @@ body::before {
 }
 }
 
-
-
-
-
-
-
-
 /* ───────── Entrance Animation ───────── */
 @keyframes fadeSlideUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-
-
-
 .animate-on-load {
   opacity: 0;
   animation: fadeSlideUp 0.8s forwards;
 }
 
-
-
-
-/* Apply staged animation delays */
 .profile-top > *,
 .media > div,
 .section,
@@ -503,18 +334,11 @@ body::before {
   animation: fadeSlideUp 0.8s forwards;
 }
 
-
-
-
 .profile-top > * { animation-delay: 0.2s; }
 .media > div:nth-child(1) { animation-delay: 0.3s; }
 .media > div:nth-child(2) { animation-delay: 0.4s; }
 .media > div:nth-child(3) { animation-delay: 0.5s; }
 .media > div:nth-child(4) { animation-delay: 0.6s; }
-
-
-
-
 .section:nth-child(1) { animation-delay: 0.7s; }
 .section:nth-child(2) { animation-delay: 0.8s; }
 .section:nth-child(3) { animation-delay: 0.9s; }
@@ -523,24 +347,12 @@ body::before {
 .buttons button:nth-child(3) { animation-delay: 1.1s; }
 </style>
 </head>
-
-
-
-
 <body>
 <div class="container">
-
-
-
-
   <div class="header">
     <span>Personal Curriculum Vitae</span>
     <span>♡</span>
   </div>
-
-
-
-
   <div class="profile-top">
     <div class="avatar">
         <img src="https://raw.githubusercontent.com/faromity/CV-Purposes/refs/heads/main/IMG_20260205_182647.jpg" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
@@ -569,15 +381,7 @@ body::before {
     <button onclick="showTab('lovies')">Lovies >:3 !</button>
     <button onclick="showTab('byf')">Stuff >:3 !</button>
   </div>
-
-
-
-
   <div class="content">
-
-
-
-
     <!-- INFO TAB -->
     <div class="tab active" id="info">
       <div class="section">
@@ -586,10 +390,6 @@ body::before {
           I’m a Grade 10 student in SACS interested in music, <a href="https://akasha.cv/profile/888664809" class="custom-link" target="_blank">Genshin Impact(Venti)</a>, tech-related stuff, photography, graphic/web design, and online communities.
         </p>
       </div>
-
-
-
-
       <div class="section">
         <h3>Skills</h3>
         <ul>
@@ -599,10 +399,6 @@ body::before {
           <li>Web Design</li>
         </ul>
       </div>
-
-
-
-
       <div class="section">
         <h3>Education</h3>
         <ul>
@@ -612,10 +408,6 @@ body::before {
         </ul>
       </div>
     </div>
-
-
-
-
     <!-- LOVIES TAB -->
     <div class="tab" id="lovies">
       <div class="section">
@@ -627,16 +419,8 @@ body::before {
           <li>Music</li>
           <li>Rain, sleeping, cats :3</li>
           <li>Rubik's Cubing</li>
-
-
-
-
         </ul>
       </div>
-
-
-
-
       <div class="section">
         <h3>Favorite Media</h3>
         <ul>
@@ -646,10 +430,6 @@ body::before {
         </ul>
       </div>
     </div>
-
-
-
-
     <!-- BYF / DNI TAB -->
     <div class="tab" id="byf">
         <div class="section">
@@ -661,10 +441,6 @@ body::before {
               <li>I value boundaries</li>
             </ul>
         </div>
-
-
-
-
         <div class="section">
           <h3>Do Not Interact</h3>
             <ul>
@@ -674,10 +450,6 @@ body::before {
             </ul>
         </div>
     </div>
-
-
-
-
   </div>
   <div class="footer">
     <strong>
@@ -690,52 +462,24 @@ Genshin Impact artwork used for non-commercial, educational purposes.
     </span>
   </div>
 </div>
-
-
-
-
 <script>
 function showTab(id) {
   const tabs = document.querySelectorAll(".tab");
   const buttons = document.querySelectorAll(".buttons button");
   const content = document.querySelector(".content");
-
-
-
-
   const activeTab = document.getElementById(id);
-
-
-
-
   // If the tab is already active, do nothing
   if (activeTab.classList.contains("active")) return;
-
-
-
-
   // Remove active from others
   tabs.forEach(t => t.classList.remove("active"));
   buttons.forEach(b => b.classList.remove("active"));
-
-
-
-
   // Activate the clicked tab and its button
   activeTab.classList.add("active");
   event.target.classList.add("active");
-
-
-
-
   // Animate content height smoothly
   const newHeight = activeTab.scrollHeight;
   content.style.height = newHeight + "px";
 }
-
-
-
-
 // Set initial height on page load
 window.addEventListener("DOMContentLoaded", () => {
   const activeTab = document.querySelector(".tab.active");
